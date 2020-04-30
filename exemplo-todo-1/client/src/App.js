@@ -17,6 +17,8 @@ const App = () => {
 
   function onSubmit(e) {
     e.preventDefault();
+    if(input.value === "") return
+
     createTodo({ variables: { text: input.value } });
     input.value = "";
 
